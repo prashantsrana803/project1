@@ -7,7 +7,7 @@ import Image from "next/image";
 import { LiaTelegramPlane } from "react-icons/lia";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TfiEmail } from "react-icons/tfi";
-import Logo2 from '../../public/download-app.svg'
+import Logo2 from '../../public/downloadapp.svg';
 
 const MyFooter = () => {
   return (
