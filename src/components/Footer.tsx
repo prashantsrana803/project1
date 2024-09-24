@@ -1,13 +1,13 @@
 import React from "react";
 import { Footer } from "flowbite-react";
-import Logo from "../../public/Logo.svg";
+import Logo from "../../public/logo.svg";
 import { FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { FiPhone } from "react-icons/fi";
 import Image from "next/image";
 import { LiaTelegramPlane } from "react-icons/lia";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TfiEmail } from "react-icons/tfi";
-import Logo2 from '../../public/download app.svg'
+import Logo2 from '../../public/download-app.svg'
 
 const MyFooter = () => {
   return (
