@@ -280,7 +280,7 @@ const Navbar = () => {
               Login/Register
             </Link>
 
-            <div className="inline-flex justify-end items-center  py-2 space-x-4 mt-4">
+            <div className="inline-flex justify-end items-end  py-2 space-x-4 mt-4">
               <FaWhatsapp className="text-3xl" />
               <FiPhone className="text-3xl" />
               <div>
