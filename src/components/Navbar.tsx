@@ -7,226 +7,290 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FiPhone } from "react-icons/fi";
 
 const Navbar = () => {
+  const [isCourseOpen, setCourseOpen] = useState(false);
+  const [isResourseOpen, setResourceOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    //state to manage dropdown 
+  const courseRef = useRef<HTMLDivElement>(null);
+  const resourceRef = useRef<HTMLDivElement>(null);
 
-    const [ isCourseOpen, setCourseOpen ] = useState(false);
-    const [ isResourseOpen, setResourceOpen ] = useState(false);
+  const toggleCourse = () => {
+    setCourseOpen(!isCourseOpen);
+    setResourceOpen(false);
+  };
 
-    //Refs for dropdowns
-    const courseRef = useRef<HTMLDivElement>(null);
-    const resourceRef = useRef<HTMLDivElement>(null);
+  const toggleResource = () => {
+    setResourceOpen(!isResourseOpen);
+    setCourseOpen(false);
+  };
 
-    const toggleCourse = () => {
-      setCourseOpen(!isCourseOpen);
-      setResourceOpen(false); //close other dropdown if open
+  // Handle outside clicks for desktop dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        courseRef.current &&
+        !courseRef.current.contains(event.target as Node) &&
+        resourceRef.current &&
+        !resourceRef.current.contains(event.target as Node)
+      ) {
+        setCourseOpen(false);
+        setResourceOpen(false);
+      }
     };
 
-    const toggleResource = () => {
-      setResourceOpen(!isResourseOpen);
-      setCourseOpen(false);  //close other dropdown if open
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
+  }, []);
 
-    //close dropdown if clicked outside
-    useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
-        if(
-          courseRef.current && !courseRef.current.contains(event.target as Node) &&
-          resourceRef.current && !resourceRef.current.contains(event.target as Node) 
-        )  {
-          setCourseOpen(false);
-          setResourceOpen(false);
-        }
-      };
-
-      document.addEventListener("mousedown", handleClickOutside);
-      return() => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, []);
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
-    <div className="w-full">
-      <div className="container mx-auto">
-        <div className="flex items-center justify-around">
-          <div className="flex items-center py-[39px] pl-16 pr-16">
+    <div className="w-full bg-white shadow-lg">
+      <div className="container mx-auto px-4 lg:px-16">
+        <div className="flex items-center justify-between py-4 lg:py-6">
+          {/* Logo */}
+          <div className="flex-shrink-0">
             <a href="#">
               <Image
                 src={Logo}
                 width={169}
                 height={42}
-                sizes="200x200"
+                sizes="100vw"
                 alt="Logo"
-                className="w-full inline-block items-center"
+                className="w-40 md:w-48 lg:w-52"
               />
             </a>
           </div>
 
-          {/* Nav Items */}
-
-          <div className="flex items-center gap-10 relative text-left">
-              <div className="relative" ref={courseRef}>
-                <button 
-                  onClick={toggleCourse}
-                  className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-1 py-2 font-semibold 
-                    ${isCourseOpen ? 'text-[#e6a123]' : 'text:black'}`
-                  }
-                  >
-                    Courses
-                  <IoIosArrowDown className={`-mr-1 h-5 w-5 text-gray-400"
-                    ${isCourseOpen ? 'text-[#e6a123]' : 'text:gray-400'}`
-                    }
-                  />
-                </button>
-
-                {isCourseOpen && (
-                  <div className="absolute z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                    <a
-                      href="#"
-                      className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Target 2025
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Target 2026
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Classroom Test Series
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      High Yield Test Series 
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Masterclass in Biology
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Books
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      All Courses
-                    </a>
-                  </div>
-                )}
-               
-              </div>
-
-              <div className="relative" ref={resourceRef}>  
-                <button 
-                  onClick={toggleResource}
-                  className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-1 py-2 font-semibold 
-                    ${isResourseOpen ? 'text-[#e6a123]' : 'text:black'}`
-                  }
-                  >
-                  Resources
-                  <IoIosArrowDown className={`-mr-1 h-5 w-5 text-gray-400"
-                  ${isResourseOpen ? 'text-[#e6a123]' : 'text:gray-400'}`
-                }
+          {/* Nav Items for desktop */}
+          <div className="hidden lg:flex items-center gap-10">
+            <div className="relative" ref={courseRef}>
+              <button
+                onClick={toggleCourse}
+                className={`inline-flex w-full justify-center gap-x-1.5 rounded-md px-1 py-2 font-semibold ${
+                  isCourseOpen ? "text-[#e6a123]" : "text-black"
+                }`}
+              >
+                Courses
+                <IoIosArrowDown
+                  className={`-mr-1 h-5 w-5 ${
+                    isCourseOpen ? "text-[#e6a123]" : "text-gray-400"
+                  }`}
                 />
-                </button>
+              </button>
 
-                {isResourseOpen && (
-                  <div className="absolute z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                    <a
-                      href="#"
-                      className="block py-1 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      MCQ Books (NEW)
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Video Lectures
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      NCERT ebooks
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Question practice 
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Tests
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Chapter Journey
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Mindmaps
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      PYQ Marked NCERT
-                    </a>
-                    <a
-                      href="#"
-                      className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
-                    >
-                      Bridge (X to XI)
-                    </a>
-                  </div>
-                )}
-              </div>
+              {isCourseOpen && (
+                <div className="absolute z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                  <a
+                    href="#"
+                    className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Target 2025
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Target 2026
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Classroom Test Series
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    High Yield Test Series
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Masterclass in Biology
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Books
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-4 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    All Courses
+                  </a>
+                </div>
+              )}
+            </div>
 
-            <Link className="inline-flex w-full justify-center bg-white px-1 py-2 font-semibold" href="#" >
+            <div className="relative" ref={resourceRef}>
+              <button
+                onClick={toggleResource}
+                className={`inline-flex w-full justify-center gap-x-1.5 rounded-md px-1 py-2 font-semibold ${
+                  isResourseOpen ? "text-[#e6a123]" : "text-black"
+                }`}
+              >
+                Resources
+                <IoIosArrowDown
+                  className={`-mr-1 h-5 w-5 ${
+                    isResourseOpen ? "text-[#e6a123]" : "text-gray-400"
+                  }`}
+                />
+              </button>
+
+              {isResourseOpen && (
+                <div className="absolute z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    MCQ Books (NEW)
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Video Lectures
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    NCERT ebooks
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Question practice
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Tests
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Chapter Journey
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Mindmaps
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    PYQ Marked NCERT
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Bridge (X to XI)
+                  </a>
+                </div>
+              )}
+            </div>
+
+            <Link
+              className="inline-flex justify-center px-3 py-2 font-semibold text-black"
+              href="#"
+            >
               Login/Register
             </Link>
           </div>
 
-          {/* Call to action box */}
-
-          <div className=" border border-3 rounded-md flex flex-row items-center border-gray-300 h-[80px] w-[400px] mr-20 ml-16 justify-around">
+          {/* Call to action */}
+          <div className="hidden lg:flex items-center border border-gray-300 rounded-md h-[80px] w-[320px] lg:w-[400px] justify-around">
             <div className="text-3xl">
               <FaWhatsapp />
             </div>
             <FiPhone className="text-3xl" />
             <div>
+              <p className="font-bold">+91-8527521718</p>
+              <p className="text-sm">(Mon - Sun | 10 AM - 8 PM)</p>
+            </div>
+          </div>
+
+          {/* Hamburger for small screens */}
+          <div className="lg:hidden flex items-center">
+            <button onClick={toggleMobileMenu} className="text-3xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile menu, shown conditionally */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden px-4 pb-4">
+          <div className="flex flex-col space-y-4">
+            <Link href="#"  
+              onClick={toggleCourse}
+                className={`inline-flex w-full justify-end gap-x-1.5 rounded-md px-1 py-2 font-semibold ${
+                  isCourseOpen ? "text-[#e6a123]" : "text-black"
+                }`}>
+              Courses
+              <IoIosArrowDown
+                  className={`-mr-1 h-5 w-5 ${
+                    isCourseOpen ? "text-[#e6a123]" : "text-gray-400"
+                  }`}
+                />
+            </Link>
+            <Link href="#"  onClick={toggleResource}
+                className={`inline-flex w-full justify-end gap-x-1.5 rounded-md px-1 py-2 font-semibold ${
+                  isResourseOpen ? "text-[#e6a123]" : "text-black"
+                }`}>
+              Resources
+              <IoIosArrowDown
+                  className={`-mr-1 h-5 w-5 ${
+                    isResourseOpen ? "text-[#e6a123]" : "text-gray-400"
+                  }`}
+                />
+            </Link>
+            <Link href="#" className=" inline-flex justify-end text-lg px-1 py-2 font-semibold">
+              Login/Register
+            </Link>
+
+            <div className="inline-flex justify-end items-center  py-2 space-x-4 mt-4">
+              <FaWhatsapp className="text-3xl" />
+              <FiPhone className="text-3xl" />
               <div>
-                <p>
-                  <strong>+91-8527521718</strong>
-                </p>
-                <p>(Mon - Sunday | 10 AM - 8 PM)</p>
+                <p className="font-bold">+91-8527521718</p>
+                <p className="text-sm">(Mon - Sun | 10 AM - 8 PM)</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr className="border-gray-300 dark:border-white" />
-        
+      )}
     </div>
   );
 };

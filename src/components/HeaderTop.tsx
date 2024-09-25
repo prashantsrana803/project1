@@ -3,14 +3,10 @@ import banner from "../../public/banner.jpeg"
 import Image from 'next/image'
 
 
-const imageLoader = () => {
-    return `https://t.me/NEETprep?utm_source=website&utm_medium=banner&utm_campaign=baby_test`
-}
-
 export default function HeaderTop() {
   return (
-    <div>
-        <a href={imageLoader()} target="_blank" rel="noopener noreferrer">
+    <div className=' '>
+        <a href='https://t.me/NEETprep?utm_source=website&utm_medium=banner&utm_campaign=baby_test' target="_blank">
             <Image
                 src={banner}
                 alt='banner'
