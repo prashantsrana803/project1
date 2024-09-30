@@ -1,5 +1,6 @@
 import CreditSection from "@/components/CreditSection";
 import MyFooter from "@/components/Footer";
+import HallofExcellence from "@/components/HallofExcellence";
 import HeaderTop from "@/components/HeaderTop";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
@@ -14,6 +15,7 @@ export default function Home() {
     <Navbar />
     <WrapperSection/>
     <SneakPeak />
+    <HallofExcellence />
     <CreditSection />
     <Newsletter />
     <MyFooter />

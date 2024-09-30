@@ -5,7 +5,7 @@ import girl from '../../public/newsletter.svg';
 const Newsletter = () => {
   return (
     <div className='hidden lg:bock md:block mx-24 my-28 w-auto h-auto'>
-        <div className='flex items-center px-20 border border-3 rounded-3xl bg-[#F6DEB2]'>
+        <div className='flex items-center px-20 border border-3 rounded-3xl bg-[#f6deb2]'>
                 <div>
                     <h2 className='text-3xl font-extrabold'>
                         Happy to Help!
