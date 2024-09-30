@@ -6,57 +6,59 @@ import Image from "next/image";
 
 const CreditSection = () => {
   return (
-    
-    //Tagline
+    <div className="bg-[#262543] text-white py-2 ">
+      <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:my-8 lg:pt-1 md:pt-20 px-8 ">
+        
+        {/* Tagline */}
+        <div className="text-start my-10 lg:mb-0 ">
+          <h5 className="text-xl text-center lg:text-start font-bold">THOUSANDS TRUST</h5>
+          <h2 className="text-4xl text-center font-bold">
+            <strong>NEETPrep Platform</strong>
+          </h2>
+        </div>
 
-    <div className="bg-[#262543] text-white">
-        <div className="flex flex-wrap items-center lg:my-20 lg:pt-1 md:pt-20">
-            <div className="pl-24 pr-28">
-              <h5 className="text-xl font-bold">THOUSANDS TRUST</h5>
-              <h2 className="text-4xl font-bold">
-                <strong>NEETPrep Platform</strong>
-              </h2>
-            </div>
-          
-      {/* 3 columns */}
-
-          <div className=" my-16 columns-3 gap-7 md:ml-20 ">
-            <ul className="md:w-full md:flex-row sm:w-full sm:flex-row sm:justify-center">
-              <li className="flex items-center space-x-8 lg:space-x-4">
-                <span className="flex flex-col">
-                  <Image src={group} height={50} width={80} alt="group1"/>
-                    <span className="text-4xl font-bold pt-5">
-                      <span>45000</span> +</span>
-                      <span className="font-semibold text-gray-400">Daily <br />visitors</span>
+        {/* 3 Columns */}
+        <div className="flex flex-col items-center my-10 lg:flex-row">
+          <ul className="flex flex-col sm:flex-row sm:justify-center w-full space-y-10 sm:space-y-0 sm:space-x-8 lg:space-x-12">
+            <li>
+              <span className="flex flex-col items-center">
+                <Image src={group} height={50} width={80} alt="group1" />
+                <span className="text-3xl font-bold pt-5">
+                  45000+
                 </span>
-              </li>
-
-              <li className="flex items-center space-x-8 lg:space-x-4">
-                <span className="flex flex-col">
-                  <span>
-                    <Image src={QnA} height={50} width={50} alt="Qna" className="text-3xl"/>
-                  </span>
-                  <span className="text-4xl font-bold pt-5">
-                    <span>8 </span>Lakhs +</span>
-                    <span className="font-semibold text-gray-400">Questions <br />Attempted</span>
+              </span>
+                <span className="font-semibold text-gray-400 text-start">
+                  Daily <br /> visitors
                 </span>
-              </li>
+            </li>
 
-              <li className=" flex items-center space-x-8 lg:space-x-4">
-                <span className="flex flex-col">
-                  <span className="pre-icon">
-                    <Image src={test} height={50} width={50} alt="Test" />
-                  </span>
-                  <span className="text-4xl font-bold pt-5">
-                    <span className="count">18 </span>Lakhs +</span>
-                  <span className="font-semibold text-gray-400 pt-1">Tests <br />Generated</span>
+            <li >
+              <span className="flex flex-col items-center">
+                <Image src={QnA} height={50} width={50} alt="Qna" className="text-3xl" />
+                <span className="text-3xl font-bold pt-5">
+                  <span>8</span>Lakhs+
                 </span>
-              </li>
-            </ul>
-          </div>
+              </span>
+                <span className="font-semibold text-gray-400 text-start">
+                  Questions <br /> Attempted
+                </span>
+            </li>
+
+            <li>
+              <span className="flex flex-col items-center">
+                <Image src={test} height={50} width={50} alt="Test" />
+                <span className="text-3xl font-bold pt-5">
+                  <span className="count">18</span>Lakhs+
+                </span>
+              </span>
+                <span className="font-semibold text-gray-400 text-start">
+                  Tests <br /> Generated
+                </span>
+            </li>
+          </ul>
         </div>
       </div>
-    
+    </div>
   );
 };
 
