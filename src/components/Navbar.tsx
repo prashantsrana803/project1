@@ -5,6 +5,7 @@ import Logo from "../../public/NavLogo.svg";
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiPhone } from "react-icons/fi";
+import { TbMenuDeep } from "react-icons/tb";
 
 const Navbar = () => {
   const [isCourseOpen, setCourseOpen] = useState(false);
@@ -227,23 +228,10 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Hamburger for small screens */}
-          <div className="lg:hidden flex items-center">
-            <button onClick={toggleMobileMenu} className="text-3xl">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-8 h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+          {/* mobile menu for small screens */}
+          <div className="lg:hidden">
+            <button onClick={toggleMobileMenu} className="text-4xl">
+            <TbMenuDeep />
             </button>
           </div>
         </div>
@@ -253,7 +241,8 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden px-4 pb-4">
           <div className="flex flex-col space-y-4">
-            <Link href="#"  
+            <div ref={courseRef}>
+            <button   
               onClick={toggleCourse}
                 className={`inline-flex w-full justify-end gap-x-1.5 rounded-md px-1 py-2 font-semibold ${
                   isCourseOpen ? "text-[#e6a123]" : "text-black"
@@ -264,8 +253,60 @@ const Navbar = () => {
                     isCourseOpen ? "text-[#e6a123]" : "text-gray-400"
                   }`}
                 />
-            </Link>
-            <Link href="#"  onClick={toggleResource}
+            </button>
+
+            {isCourseOpen && (
+                <div className="flex flex-col text-end mt-2 origin-top-right rounded-md bg-white shadow-lg">
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Target 2025
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Target 2026
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Classroom Test Series
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    High Yield Test Series
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Masterclass in Biology
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Books
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    All Courses
+                  </a>
+                </div>
+              )}
+
+            </div>
+
+            <div ref={resourceRef}>
+            <button 
+              onClick={toggleResource}
                 className={`inline-flex w-full justify-end gap-x-1.5 rounded-md px-1 py-2 font-semibold ${
                   isResourseOpen ? "text-[#e6a123]" : "text-black"
                 }`}>
@@ -275,7 +316,68 @@ const Navbar = () => {
                     isResourseOpen ? "text-[#e6a123]" : "text-gray-400"
                   }`}
                 />
-            </Link>
+            </button>
+
+            {isResourseOpen && (
+                <div className="flex flex-col text-end mt-2 rounded-md bg-white shadow-lg">
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    MCQ Books (NEW)
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Video Lectures
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    NCERT ebooks
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Question practice
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Tests
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Chapter Journey
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Mindmaps
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    PYQ Marked NCERT
+                  </a>
+                  <a
+                    href="#"
+                    className="block py-1 px-1 text-sm text-gray-700 hover:text-gray-100"
+                  >
+                    Bridge (X to XI)
+                  </a>
+                </div>
+              )}
+
+            </div>
             <Link href="#" className=" inline-flex justify-end text-lg px-1 py-2 font-semibold">
               Login/Register
             </Link>
