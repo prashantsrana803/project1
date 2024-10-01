@@ -16,7 +16,6 @@ export default function Home() {
     <Navbar />
     <WrapperSection/>
     <SneakPeak />
-    <HallofExcellence />
     <CreditSection />
     <NewsletterSM />
     <Newsletter />
