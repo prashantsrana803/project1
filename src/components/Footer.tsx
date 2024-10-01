@@ -10,6 +10,7 @@ import { TfiEmail } from "react-icons/tfi";
 import Logo2 from '../../public/downloadapp.svg';
 
 const MyFooter = () => {
+
   return (
     <Footer>
       <div className="w-full bg-brandPrimary py-16 px-28 text-white">
@@ -35,18 +36,26 @@ const MyFooter = () => {
               </p>
             </div>
             <div className="flex items-center gap-5">
-              <i className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
+              <a 
+                href="https://www.youtube.com/c/NEETprep" 
+                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
                 <FaYoutube />
-              </i>
-              <i className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
+              </a>
+              <a 
+                href="https://t.me/NEETprep" 
+                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
                 <LiaTelegramPlane />
-              </i>
-              <i className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
+              </a>
+              <a 
+                href="https://www.facebook.com/NEETprep" 
+                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
                 <TiSocialFacebook />
-              </i>
-              <i className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/neetprep/" 
+                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
                 <FaLinkedinIn />
-              </i>
+              </a>
             </div>
           </div>
 
@@ -102,8 +111,14 @@ const MyFooter = () => {
             <div className="flex items-center text-[12px] gap-2 ">
             </div>
             <div className="flex items-center">
-                <div><TfiEmail className=" mt-2 font-bold text-3xl" /></div>
-                <div className="ms-2 mt-2"><strong>support@neetprep.com</strong></div>
+                <div>
+                  <TfiEmail className=" mt-2 font-bold text-3xl" />
+                </div>
+                <div className="ms-2 mt-2 cursor-pointer">
+                  <a href="mailto:support@neetprep.com">
+                    <strong>support@neetprep.com</strong>
+                  </a>
+                </div>
             </div>
 
             <div className=" mt-8">
@@ -111,7 +126,7 @@ const MyFooter = () => {
                 <p>Download App</p>
               </div>
                   <div>
-                    <a href="/">
+                    <a href="https://play.google.com/store/apps/details?id=com.lernr.app&hl=en_IN&gl=US">
                       <Image
                         src={Logo2}
                         width={150}
