@@ -1,5 +1,6 @@
 import CreditSection from "@/components/CreditSection";
 import MyFooter from "@/components/Footer";
+import FreeTrial from "@/components/FreeTrial";
 import HallofExcellence from "@/components/HallofExcellence";
 import HeaderTop from "@/components/HeaderTop";
 import MediaCoverage from "@/components/MediaCoverage";
@@ -17,6 +18,7 @@ export default function Home() {
     <Navbar />
     <WrapperSection/>
     <SneakPeak />
+    <FreeTrial />
     <HallofExcellence />
     <MediaCoverage />
     <CreditSection />

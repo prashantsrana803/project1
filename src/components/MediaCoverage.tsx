@@ -40,7 +40,7 @@ const MediaCoverage = () => {
               alt="book"
               width={355}
               height={86}
-              className="absolute left-[3rem] lg:top-[146rem] lg:left-[20rem]"
+              className="absolute left-[4.5rem] lg:top-[150rem] lg:left-[21rem]"
             />
           </div>
         </div>

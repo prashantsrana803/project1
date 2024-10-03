@@ -144,7 +144,7 @@ const HallofExcellence = () => {
                                 alt='awesome'
                                 height={200}
                                 width={192}              
-                                className='absolute right-[-40px] bottom-[-15px]'   
+                                className='absolute right-[-30px] bottom-[-15px]'   
                             />
                     </div>
             </div>
