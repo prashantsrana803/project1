@@ -2,6 +2,7 @@ import CreditSection from "@/components/CreditSection";
 import MyFooter from "@/components/Footer";
 import HallofExcellence from "@/components/HallofExcellence";
 import HeaderTop from "@/components/HeaderTop";
+import MediaCoverage from "@/components/MediaCoverage";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
 import NewsletterSM from "@/components/NewsletterSM";
@@ -16,6 +17,8 @@ export default function Home() {
     <Navbar />
     <WrapperSection/>
     <SneakPeak />
+    <HallofExcellence />
+    <MediaCoverage />
     <CreditSection />
     <NewsletterSM />
     <Newsletter />

@@ -13,8 +13,6 @@ import ved from '../../public/air/ved.png'
 import { IoMdClose } from 'react-icons/io';
 
 
-
-
 const HallofExcellence = () => {
 
         const [isModalOpen, setModalOpen] = useState(false);
@@ -31,7 +29,7 @@ const HallofExcellence = () => {
         };
 
   return (
-    <div className='border-[1px] box-border rounded-xl mx-28 mt-10 mb-16 pb-20 py-10 border-[#f6deb2] bg-[#fefaf4px]'>
+    <div className='border-[1px] box-border rounded-xl mx-8 sm:mx-28 mt-10 mb-16 pb-20 py-10 border-[#f6deb2] bg-[#fefaf4px]'>
         {/* title */}
 
         <div className='flex justify-center text-2xl mb-10 md:px-3 sm:px-5 sm:text-center '>
@@ -42,8 +40,8 @@ const HallofExcellence = () => {
 
                         {/* topper photo section */}
 
-        <div className=' mx-16 grid grid-flow-col-dense grid-cols-3 gap-4 '>
-            <div className='border-[1px] border-[#6c757d] rounded-2xl items-center py-16 px-8 relative'>
+        <div className=' mx-0 sm:mx-16 grid grid-flow-col-dense grid-cols-3 gap-4 '>
+            <div className='border-[1px] border-[#6c757d] rounded-2xl items-center py-16 px-0 sm:px-8 relative'>
                    
                     <div className='absolute top-[-50px] left-[-50px]'>
                             <Image
@@ -72,8 +70,8 @@ const HallofExcellence = () => {
                          {/* Other Topper Section */}
 
             <div className='border-[1px] border-[#6c757d] rounded-2xl col-span-2 ml-6 items-center relative'>
-                <div className=' pr-[5rem] pl-[2rem] pb-[3rem] '>
-                    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12 mt-8'>    
+                <div className=' pr-0 sm:pr-[5rem] pl-4 sm:pl-[2rem] pb-[3rem] '>
+                    <div className='grid grid-cols-3 gap-4 sm:gap-12 mt-8'>    
                         <div onClick= {() => handleModalOpen("https://www.youtube.com/embed/2wmfx6AXu3A")}>
                                 <Image
                                     src={sengupta} 
