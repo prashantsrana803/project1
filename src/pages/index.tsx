@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
 import NewsletterSM from "@/components/NewsletterSM";
 import SneakPeak from "@/components/SneakPeak";
+import Testimonial from "@/components/Testimonial";
 import WrapperSection from "@/components/WrapperSection";
 
 
@@ -22,6 +23,7 @@ export default function Home() {
     <HallofExcellence />
     <MediaCoverage />
     <CreditSection />
+    <Testimonial />
     <NewsletterSM />
     <Newsletter />
     <MyFooter />

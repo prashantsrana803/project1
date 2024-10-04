@@ -29,7 +29,7 @@ const HallofExcellence = () => {
         };
 
   return (
-    <div className='border-[1px] box-border rounded-xl mx-8 sm:mx-28 mt-10 mb-16 pb-20 py-10 border-[#f6deb2] bg-[#fefaf4px]'>
+    <div className='border-[1px] box-border rounded-xl mx-8 sm:mx-28 sm:my-20 pb-20 py-10   border-[#f6deb2] bg-[#fefaf4px]'>
         {/* title */}
 
         <div className='flex justify-center text-2xl mb-10 md:px-3 sm:px-5 sm:text-center '>
