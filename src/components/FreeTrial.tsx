@@ -4,34 +4,34 @@ import React from "react";
 
 const FreeTrial = () => {
   return (
-    <div className="mx-28 my-12">
-      <div className="grid grid-cols-2 gap-20">
+    <div className="mx-8 my-8 sm:mx-28 sm:my-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-20">
         <div>
           <Image src={Laptop} alt="laptop" width={546} height={468} />
         </div>
 
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center ">
           <div>
-            <div className="font-extralight text-4xl">Book your Instant &nbsp;</div>
-            <div className="font-extrabold text-4xl pb-10">Free Trial</div>
+            <div className="font-extralight text-4xl text-center">Book your Instant &nbsp;</div>
+            <div className="font-extrabold text-4xl pb-6 text-center">Free Trial</div>
           </div>
 
           <form className="flex flex-col">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
-                className="border rounded-xl border-[#C5C5C5] mb-4 py-4 px-2 text-sm"
+                className="border rounded-xl border-[#C5C5C5] mb-6 py-4 px-2 text-sm"
                 placeholder="Enter Your Name"
               />
               <input
                 type="phone"
-                className="border rounded-xl border-[#C5C5C5] mb-4 py-4 px-2 text-sm"
+                className="border rounded-xl border-[#C5C5C5] mb-6 py-4 px-2 text-sm"
                 placeholder="Enter Your Moblie No."
               />
             </div>
             <input
               type="email"
-              className="border rounded-xl border-[#C5C5C5] mb-4 py-4 px-2 text-sm"
+              className="border rounded-xl border-[#C5C5C5] mb-6 py-4 px-2 text-sm"
               placeholder="Enter Your Email-ID"
             />
             <input
