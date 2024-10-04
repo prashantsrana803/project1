@@ -9,7 +9,7 @@ import mannat from '../../public/air/mannat.png'
 import sengupta from '../../public/air/sengupta.png'
 import shiwal from '../../public/air/shiwal.png'
 import sumit from '../../public/air/sumit.png'
-import ved from '../../public/air/ved.png'
+import ved from '../../public/air/Ved.png'
 import { IoMdClose } from 'react-icons/io';
 
 

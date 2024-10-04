@@ -32,15 +32,11 @@ const MediaCoverage = () => {
 
           <div className="rext-end">
             <Image
-            // style={{
-            //   width: '95%',
-            //   height: '50%',
-            // }}
               src={book}
               alt="book"
               width={355}
               height={86}
-              className="absolute left-[4.5rem] lg:top-[150rem] lg:left-[21rem]"
+              className="absolute left-[4.5rem] lg:top-[181rem] lg:left-[21rem]"
             />
           </div>
         </div>
