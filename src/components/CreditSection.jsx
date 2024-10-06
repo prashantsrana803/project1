@@ -15,7 +15,7 @@ const CreditSection = () => {
         onEnter={() => setCounterState(true)}
         onExit={() => setCounterState(false)}
       >
-        <div className="grid sm:grid-cols-3 grid-rows-1 items-center">
+        <div className="grid lg:grid-cols-3 grid-rows-1 items-center">
           {/* Tagline */}
 
           <div className="lg:text-start text-center sm:pl-10">
@@ -27,9 +27,9 @@ const CreditSection = () => {
 
           {/* 3 Columns */}
 
-          <div className="lg:col-span-2 my-10 sm:pl-28 flex justify-center">
-            <ul className="grid sm:grid-cols-3 items-center gap-10 lg-gap-0">
-              <li className="w-60">
+          <div className="lg:col-span-2 my-10 flex justify-center">
+            <ul className="grid sm:grid-cols-3 gap-10  pl-26 sm:pl-0 lg:pl-28  pr-0 lg:pr-24">
+              <li className="md:w-60">
                 <Image src={group} height={50} width={80} alt="group1" />
                 <span className="text-3xl font-bold pt-5">
                   {counterState && (
@@ -42,7 +42,7 @@ const CreditSection = () => {
                 </span>
               </li>
 
-              <li className="w-60">
+              <li className="md:w-60">
                 <Image src={QnA} height={50} width={50} alt="Qna" />
                 <span className="text-3xl font-bold pt-5">
                   {counterState && <CountUp start={0} end={8} duration={4} />}{" "}
@@ -53,7 +53,7 @@ const CreditSection = () => {
                 </span>
               </li>
 
-              <li className="w-60">
+              <li className="md:w-60">
                 <Image src={test} height={50} width={50} alt="Test" />
                 <span className="text-3xl font-bold pt-5">
                   {counterState && <CountUp start={0} end={18} duration={5} />}{" "}

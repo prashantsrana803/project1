@@ -19,7 +19,7 @@ const MediaCoverage = () => {
       <div className="grid lg:grid-cols-4 lg:grid-rows-2 sm:grid-cols-2 gap-3">
         {/* Left Column */}
 
-        <div className="col-span-2 bg-[rgb(178,122,20)] h-[350px] md:h-full rounded-3xl relative">
+        <div className="col-span-2 bg-[rgb(178,122,20)] h-[350px] rounded-3xl relative">
           <div className="pl-8 pt-8 text-white w-80">
             <p className="font-bold text-3xl">2500+NEET selections</p>
             <p className="text-xl pt-4 absolute z-20">
@@ -37,7 +37,7 @@ const MediaCoverage = () => {
         </div>
 
         {/* right Column */}
-        <div className="col-span-2 sm:row-span-2 bg-[#1AC387] sm:w-[560px] rounded-3xl px-8 sm:px-0">
+        <div className="col-span-2 sm:row-span-2 bg-[#1AC387] rounded-3xl px-8 sm:px-0">
           <div className="flex justify-center ">
             <div className="grid grid-cols-3 gap-8 py-10">
               <a
