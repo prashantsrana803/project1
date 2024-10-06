@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
   BsArrowLeftCircle,
-  BsArrowRight,
   BsArrowRightCircle,
 } from "react-icons/bs";
 
@@ -14,7 +13,6 @@ const Testimonial = () => {
     className?: string;
     onClick?: React.MouseEventHandler<HTMLDivElement>;
   }
-
   const SampleNextArrow: React.FC<ArrowProps> = ({
     className,
     
@@ -37,8 +35,7 @@ const Testimonial = () => {
   }) => {
     return (
       <div
-        className={className}
-        
+        className={className}     
         onClick={onClick}
       >
         <BsArrowLeftCircle className="text-4xl text-[#6E6E6E]" />
@@ -75,27 +72,27 @@ const Testimonial = () => {
 
   return (
     <div className="mx-10 sm:mx-20 my-10 sm:mt-20 mb-5">
-      <div className=" flex justify-center">
+      <div className="flex justify-center">
         <span className="font-light text-4xl">What sets&nbsp;</span>
         <span className="font-bold text-4xl">NeetPrep&nbsp;</span>
         <span className="font-light text-4xl">apart?</span>
       </div>
 
-      <div className=" bg-[#FFFBEB] px-10 sm:py-0 py-10">
+      <div className=" bg-[#FFFBEB] px-4 sm:px-10">
         <Slider {...settings}>
           {data.map((d) => (
-            <div className="my-8 p-4 mx-4">
-              <div className=" bg-[#FFFBEB] h-[300px] sm:h-[250px]">
+            <div className="my-8 p-4">
+              <div className=" bg-[#FFFBEB] h-[400px] sm:h-[250px]">
                 <div>
-                  <p className=" tracking-wider leading-5 text-lg sm:text-base sm:font-normal ">
+                  <p className=" tracking-wider leading-5 sm:font-normal">
                     {d.review}
                   </p>
                 </div>
 
-                <div className="flex flex-row  absolute bottom-2">
+                <div className="flex flex-row absolute bottom-2 lg:w-80 w-[16rem]">
                   <Image src={d.img} height={6} width={66} alt="" />
-                  <div>
-                    <p className="flex flex-col font-bold sm:text-xl text-lg text-[#252525] pl-4">
+                  <div className="">
+                    <p className="flex flex-col font-bold sm:text-xl text-xl text-[#252525] pl-4 ">
                       {d.name}
                     </p>
                     <p className="flex flex-col text-base font-medium text-[#6E6E6E] pl-4">
