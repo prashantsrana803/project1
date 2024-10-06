@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import book from "../../public/media/book.png";
 import cnbn from "../../public/media/cnbc.png";
 import openBook from "../../public/media/open-book.png";
 import dailyhunt from "../../public/media/dailyhunt.png";
@@ -16,11 +15,11 @@ import toi from "../../public/media/the-times-of-india.png";
 
 const MediaCoverage = () => {
   return (
-    <div className="pb-16 mx-4 sm:mx-28 ">
+    <div className="py-16 sm:py-2 sm:mx-28 ">
       <div className="grid lg:grid-cols-4 lg:grid-rows-2 sm:grid-cols-2 gap-3">
         {/* Left Column */}
 
-        <div className="col-span-2 bg-[rgb(178,122,20)] h-[350px] md:h-full rounded-3xl">
+        <div className="col-span-2 bg-[rgb(178,122,20)] h-[350px] md:h-full rounded-3xl relative">
           <div className="pl-8 pt-8 text-white w-80">
             <p className="font-bold text-3xl">2500+NEET selections</p>
             <p className="text-xl pt-4 absolute z-20">
@@ -28,16 +27,12 @@ const MediaCoverage = () => {
               colleges across
               <br /> India from an online <br /> teaching platform
             </p>
-          </div>
-
-          <div className="rext-end">
-            <Image
-              src={book}
-              alt="book"
-              width={355}
-              height={86}
-              className="absolute left-[4.5rem] lg:top-[181rem] lg:left-[21rem]"
-            />
+            <div
+            className="absolute right-0 bottom-0 bg-no-repeat bg-right h-[303px] w-[343px] z-0"
+            style={{ backgroundImage: 'url("/media/book.png")' }}>
+              
+            </div>
+          
           </div>
         </div>
 
