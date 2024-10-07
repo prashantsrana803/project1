@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsletterSM = () => {
   return (
-    <div className="md:block sm:block lg:hidden px-6 sm:px-11 bg-[#f6deb2] mb-10 sm:my-28 py-10 sm:py-20">
+    <div className="sm:block md:hidden hidden sm:px-11 bg-[#f6deb2] mt-16 py-10 sm:py-20">
       <div>
         <div className="flex  justify-center font-extrabold text-3xl leading-9 text-[#252525]">Start a free trial</div>
         <div className="mt-2 text-center font-normal leading-6 text-[#4a4a4a]">Start your NEETprep journey now...</div>

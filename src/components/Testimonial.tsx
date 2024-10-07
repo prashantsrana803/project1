@@ -71,7 +71,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="mx-10 sm:mx-20 my-10 sm:mt-20 mb-5">
+    <div className="mx-10 sm:mx-20 sm:mt-20 mb-5 my-16">
       <div className="flex justify-center">
         <span className="font-light text-4xl">What sets&nbsp;</span>
         <span className="font-bold text-4xl">NeetPrep&nbsp;</span>
