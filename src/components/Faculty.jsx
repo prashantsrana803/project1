@@ -35,7 +35,7 @@ const Faculty = () => {
 
   return (
     // Quotation
-    <div className=" mx-28 px-1">
+    <div className=" mx-12 md:mx-28 px-1">
       <div className="flex justify-center text-4xl my-20">
         <p className="font-bold">
           NEET Expert Faculty

@@ -7,13 +7,12 @@ import Image from "next/image";
 import { LiaTelegramPlane } from "react-icons/lia";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TfiEmail } from "react-icons/tfi";
-import Logo2 from '../../public/downloadapp.svg';
+import Logo2 from "../../public/downloadapp.svg";
 
 const MyFooter = () => {
-
   return (
     <Footer>
-      <div className="w-full bg-brandPrimary py-16 px-28 text-white">
+      <div className="w-full bg-brandPrimary py-16 px-8 lg:px-28  text-white">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           <div className="space-y-4">
             <a
@@ -35,32 +34,39 @@ const MyFooter = () => {
                 Restaurant, Green Park Extension, New Delhi, 110016
               </p>
             </div>
-            <div className="flex items-center gap-5">
-              <a 
-                href="https://www.youtube.com/c/NEETprep" 
-                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
+            <div className="flex items-center gap-5 sm:w-[60px]">
+              <a
+                href="https://www.youtube.com/c/NEETprep"
+                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg"
+              >
                 <FaYoutube />
               </a>
-              <a 
-                href="https://t.me/NEETprep" 
-                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
+              <a
+                href="https://t.me/NEETprep"
+                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg"
+              >
                 <LiaTelegramPlane />
               </a>
-              <a 
-                href="https://www.facebook.com/NEETprep" 
-                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
+              <a
+                href="https://www.facebook.com/NEETprep"
+                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg"
+              >
                 <TiSocialFacebook />
               </a>
-              <a 
-                href="https://www.linkedin.com/company/neetprep/" 
-                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg">
+              <a
+                href="https://www.linkedin.com/company/neetprep/"
+                className="bg-[#ffffff] p-2 rounded-full text-[#b27a14] text-lg"
+              >
                 <FaLinkedinIn />
               </a>
             </div>
           </div>
 
           <div>
-            <Footer.Title title="NEET Information" className=" text-xl text-white"/>
+            <Footer.Title
+              title="NEET Information"
+              className=" text-xl text-white"
+            />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">NEET 2025</Footer.Link>
               <Footer.Link href="#">NEET Syllabus</Footer.Link>
@@ -83,7 +89,10 @@ const MyFooter = () => {
           </div>
 
           <div>
-            <Footer.Title title="Partnerships" className="text-xl text-white mb-10" />
+            <Footer.Title
+              title="Partnerships"
+              className="text-xl text-white mb-10"
+            />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">
                 Become a Mentor (MBBS Students only)
@@ -96,54 +105,48 @@ const MyFooter = () => {
           </div>
 
           <div>
-              <div className="flex items-center gap-4">
-                <div className="flex items-start font-bold text-3xl">
-                  <FiPhone />
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-white mb-2 ">91-8527521718</h1> 
-                  <h1 className="text-sm" >(Mon - Sunday | 10 AM - 8 PM)</h1>
-                </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-start font-bold text-3xl">
+                <FiPhone />
               </div>
-              <div className="items-center text-sm">
+              <div>
+                <h1 className="text-xl font-bold text-white mb-2 ">
+                  91-8527521718
+                </h1>
+                <h1 className="text-sm">(Mon - Sunday | 10 AM - 8 PM)</h1>
               </div>
-
-            <div className="flex items-center text-[12px] gap-2 ">
             </div>
+
             <div className="flex items-center">
-                <div>
-                  <TfiEmail className=" mt-2 font-bold text-3xl" />
-                </div>
-                <div className="ms-2 mt-2 cursor-pointer">
-                  <a href="mailto:support@neetprep.com">
-                    <strong>support@neetprep.com</strong>
-                  </a>
-                </div>
+              <div>
+                <TfiEmail className=" mt-2 font-bold text-3xl" />
+              </div>
+              <div className="ms-2 mt-2 cursor-pointer">
+                <a href="mailto:support@neetprep.com" className="lg-0 lg:w-48 break-all">
+                  <strong>support@neetprep.com</strong>
+                </a>
+              </div>
             </div>
 
             <div className=" mt-8">
               <div className="text-xl font-bold px-1 py-2 items-end">
                 <p>Download App</p>
               </div>
-                  <div>
-                    <a href="https://play.google.com/store/apps/details?id=com.lernr.app&hl=en_IN&gl=US">
-                      <Image
-                        src={Logo2}
-                        width={150}
-                        height={150}
-                        alt="Logo"
-                      />
-                    </a>
-                </div>
+              <div>
+                <a href="https://play.google.com/store/apps/details?id=com.lernr.app&hl=en_IN&gl=US">
+                  <Image src={Logo2} width={150} height={150} alt="Logo" />
+                </a>
+              </div>
             </div>
-
           </div>
         </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 pt-10 gap-8">
 
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 pt-10 gap-8">
           <div>
-            <Footer.Title title="Botany Questions" className="text-xl text-white mb-10" />
+            <Footer.Title
+              title="Botany Questions"
+              className="text-xl text-white mb-10"
+            />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">Living World</Footer.Link>
               <Footer.Link href="#">Biological Classification</Footer.Link>
@@ -177,7 +180,10 @@ const MyFooter = () => {
               <Footer.Link href="#">Environmental Issues</Footer.Link>
             </Footer.LinkGroup>
 
-            <Footer.Title title="Company" className="text-xl text-white mb-10 mt-10" />
+            <Footer.Title
+              title="Company"
+              className="text-xl text-white mb-10 mt-10"
+            />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">About Us</Footer.Link>
               <Footer.Link href="#">Terms of Use</Footer.Link>
@@ -187,7 +193,10 @@ const MyFooter = () => {
           </div>
 
           <div>
-            <Footer.Title title="Chemistry Questions" className="text-xl text-white mb-10" />
+            <Footer.Title
+              title="Chemistry Questions"
+              className="text-xl text-white mb-10"
+            />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">
                 Some Basic Concepts of Chemistry
@@ -235,7 +244,10 @@ const MyFooter = () => {
           </div>
 
           <div>
-            <Footer.Title title="Physics Questions" className="text-xl text-white mb-10" />
+            <Footer.Title
+              title="Physics Questions"
+              className="text-xl text-white mb-10"
+            />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">Units and Measurement</Footer.Link>
               <Footer.Link href="#">Mathematical Tools</Footer.Link>
@@ -282,7 +294,10 @@ const MyFooter = () => {
           </div>
 
           <div>
-            <Footer.Title title="Zoology Questions" className="text-xl text-white mb-10" />
+            <Footer.Title
+              title="Zoology Questions"
+              className="text-xl text-white mb-10"
+            />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">Animal Kingdom</Footer.Link>
               <Footer.Link href="#">
@@ -316,8 +331,7 @@ const MyFooter = () => {
               </Footer.Link>
             </Footer.LinkGroup>
           </div>
-          </div>
-        
+        </div>
 
         <div className="w-full py-4 mt-8">
           <Footer.Divider />

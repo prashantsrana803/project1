@@ -47,9 +47,9 @@ const Testimonial = () => {
   return (
     <div className="mx-10 sm:mx-20 sm:mt-20 mb-5 my-16">
       <div className="flex justify-center">
-        <span className="font-light text-4xl">What sets&nbsp;</span>
-        <span className="font-bold text-4xl">NeetPrep&nbsp;</span>
-        <span className="font-light text-4xl">apart?</span>
+        <span className="font-light sm:text-4xl">What sets&nbsp;</span>
+        <span className="font-bold sm:text-4xl">NeetPrep&nbsp;</span>
+        <span className="font-light sm:text-4xl">apart?</span>
       </div>
 
       <div className=" bg-[#FFFBEB] px-4 sm:px-10">

@@ -15,7 +15,7 @@ import toi from "../../public/media/the-times-of-india.png";
 
 const MediaCoverage = () => {
   return (
-    <div className="my-16 sm:mx-28 ">
+    <div className="hidden lg:block md:block my-16 sm:mx-28 ">
       <div className="grid lg:grid-cols-4 lg:grid-rows-2 sm:grid-cols-2 gap-3">
         {/* Left Column */}
 
