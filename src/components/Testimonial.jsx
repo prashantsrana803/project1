@@ -1,56 +1,30 @@
-import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-  BsArrowLeftCircle,
-  BsArrowRightCircle,
-} from "react-icons/bs";
+import Image from "next/image";
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+
+export const NexArrow = ({ className, onClick }) => (
+  <div className={className} onClick={onClick}>
+    <BsArrowRightCircle className="absolute left-[-10px] text-5xl text-[#6E6E6E]" />
+  </div>
+);
+export const PreArrow = ({ className, onClick }) => (
+  <div className={className} onClick={onClick}>
+    <BsArrowLeftCircle className="absolute right-[-12px] text-5xl text-[#6E6E6E]" />
+  </div>
+);
 
 const Testimonial = () => {
-  interface ArrowProps {
-    className?: string;
-    onClick?: React.MouseEventHandler<HTMLDivElement>;
-  }
-  const SampleNextArrow: React.FC<ArrowProps> = ({
-    className,
-    
-    onClick,
-  }) => {
-    return (
-      <div
-        className={className}
-        
-        onClick={onClick}
-      >
-        <BsArrowRightCircle className="text-4xl text-[#6E6E6E]" />
-      </div>
-    );
-  };
-  const SamplePrevArrow: React.FC<ArrowProps> = ({
-    className,
-    
-    onClick,
-  }) => {
-    return (
-      <div
-        className={className}     
-        onClick={onClick}
-      >
-        <BsArrowLeftCircle className="text-4xl text-[#6E6E6E]" />
-      </div>
-    );
-  };
-
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <NexArrow />,
+    prevArrow: <PreArrow />,
 
     responsive: [
       {

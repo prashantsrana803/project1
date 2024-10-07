@@ -18,7 +18,7 @@ const HallofExcellence = () => {
         const [isModalOpen, setModalOpen] = useState(false);
         const [url, setUrl] = useState('');
     
-        const handleModalOpen = (url: string) => {
+        const handleModalOpen = (url) => {
             setUrl(url);
             setModalOpen(true);
         };

@@ -12,8 +12,8 @@ const Navbar = () => {
   const [isResourseOpen, setResourceOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const courseRef = useRef<HTMLDivElement>(null);
-  const resourceRef = useRef<HTMLDivElement>(null);
+  const courseRef = useRef(null);
+  const resourceRef = useRef(null);
 
   const toggleCourse = () => {
     setCourseOpen(!isCourseOpen);
@@ -27,12 +27,12 @@ const Navbar = () => {
 
   // Handle outside clicks for desktop dropdown
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event) => {
       if (
         courseRef.current &&
-        !courseRef.current.contains(event.target as Node) &&
+        !courseRef.current.contains(event.target) &&
         resourceRef.current &&
-        !resourceRef.current.contains(event.target as Node)
+        !resourceRef.current.contains(event.target)
       ) {
         setCourseOpen(false);
         setResourceOpen(false);

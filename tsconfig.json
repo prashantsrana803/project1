@@ -16,6 +16,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/CreditSection.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/CreditSection.jsx", "src/components/Testimonial.jsx", "src/components/Faculty.jsx", "src/components/MediaCoverage.jsx", "src/components/Navbar.jsx", "src/components/Newsletter.jsx", "src/components/NewsletterSM.jsx", "src/components/SneakPeak.jsx", "src/components/WrapperSection.jsx", "src/components/Footer.jsx", "src/components/FreeTrial.jsx", "src/components/HallofExcellence.jsx", "src/components/HeaderTop.jsx", "src/pages/_app.jsx", "src/pages/index.jsx"],
   "exclude": ["node_modules"]
 }

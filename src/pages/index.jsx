@@ -1,4 +1,5 @@
 import CreditSection from "@/components/CreditSection";
+import Faculty from "@/components/Faculty";
 import MyFooter from "@/components/Footer";
 import FreeTrial from "@/components/FreeTrial";
 import HallofExcellence from "@/components/HallofExcellence";
@@ -17,7 +18,8 @@ export default function Home() {
   <main>
     <HeaderTop />
     <Navbar />
-    <WrapperSection/>
+    <WrapperSection />
+    <Faculty />
     <SneakPeak />
     <FreeTrial />
     <HallofExcellence />
