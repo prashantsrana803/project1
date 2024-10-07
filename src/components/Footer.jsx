@@ -12,8 +12,8 @@ import Logo2 from "../../public/downloadapp.svg";
 const MyFooter = () => {
   return (
     <Footer>
-      <div className="w-full bg-brandPrimary py-16 px-8 lg:px-28  text-white">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+      <div className="w-full bg-brandPrimary pt-16 pb-4 px-8 lg:px-28 text-white">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 -center gap-8">
           <div className="space-y-4">
             <a
               href="/"
@@ -122,7 +122,7 @@ const MyFooter = () => {
                 <TfiEmail className=" mt-2 font-bold text-3xl" />
               </div>
               <div className="ms-2 mt-2 cursor-pointer">
-                <a href="mailto:support@neetprep.com" className="lg-0 lg:w-48 break-all">
+                <a href="mailto:support@neetprep.com" className="lg-0 lg:w-48">
                   <strong>support@neetprep.com</strong>
                 </a>
               </div>
@@ -333,13 +333,13 @@ const MyFooter = () => {
           </div>
         </div>
 
-        <div className="w-full py-4 mt-8">
+        <div className="w-full pt-4 mt-8">
           <Footer.Divider />
         </div>
 
         <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright &#169; 2024 neetprep.com</p>
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+          <div className="hidden md:block mt-4 space-x-6 sm:mt-0 sm:justify-center">
             <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
               <li>
                 <a href="#" className="hover:underline me-4 md:me-6">

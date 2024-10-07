@@ -52,7 +52,7 @@ const Testimonial = () => {
         <span className="font-light sm:text-4xl">apart?</span>
       </div>
 
-      <div className=" bg-[#FFFBEB] px-4 sm:px-10">
+      <div className=" bg-[#FFFBEB] rounded-2xl px-4 sm:px-10 my-10">
         <Slider {...settings}>
           {data.map((d) => (
             <div className="my-8 p-4">
