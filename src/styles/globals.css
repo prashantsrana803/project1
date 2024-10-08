@@ -25,4 +25,7 @@ wbox {
   }
 }
 
-
+#confident {
+  background-image: url(/public/confident-arrow.svg);
+  color: #E6A123;
+}
