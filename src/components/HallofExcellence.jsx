@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
-import Awesome from '../../public/awesome.svg'
-import Great from '../../public/great-work.svg'
+import Awesome from '../../public/air/awesome.svg'
+import Great from '../../public/air/great-work.svg'
 import shubhan from '../../public/air/shubhan.png'
 import agrawal from '../../public/air/agrawal.png'
 import astha from '../../public/air/astha.png'
