@@ -11,6 +11,7 @@ import NewsletterSM from "@/components/NewsletterSM";
 import SneakPeak from "@/components/SneakPeak";
 import Testimonial from "@/components/Testimonial";
 import WrapperSection from "@/components/WrapperSection";
+import Impact from '@/components/Impact'
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
     <SneakPeak />
     <FreeTrial />
     <HallofExcellence />
+    <Impact />
     <MediaCoverage />
     <CreditSection />
     <Testimonial />
