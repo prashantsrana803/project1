@@ -186,7 +186,7 @@ const MyFooter = () => {
             />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">About Us</Footer.Link>
-              <Footer.Link href="#">Terms of Use</Footer.Link>
+              <Footer.Link href="#">Terms & Conditions</Footer.Link>
               <Footer.Link href="#">Privacy Policy</Footer.Link>
               <Footer.Link href="#">Refund Policy</Footer.Link>
             </Footer.LinkGroup>

@@ -72,7 +72,7 @@ const Impact = () => {
                     <div className="font-light">Impact of </div>
                     <div className="font-extrabold">&nbsp;NEET Prep</div>
                 </div>
-                <div className="mx-2">
+                <div className="mx-8">
                     {/* slider */}
                     <Slider {...settings} >
                         {data.map((d ) => (
