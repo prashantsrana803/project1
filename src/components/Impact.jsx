@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import data from '@/data/ImpactData'
 
 const Impact = () => {
     const settings = {     
@@ -85,26 +86,5 @@ const Impact = () => {
             </div>
     );
 };
-
-const data = [
-    { img: `/impact/abhishek.png` },
-    { img: `/impact/akshat.png` },
-    { img: `/impact/arpan.png` },
-    { img: `/impact/aryaman.png` },
-    { img: `/impact/atharva.png` },
-    { img: `/impact/chirag.png` },
-    { img: `/impact/kaleskar.png` },
-    { img: `/impact/mandava.png` },
-    { img: `/impact/mohnish.png` },
-    { img: `/impact/raghav.png` },
-    { img: `/impact/Sanskriti.png` },
-    { img: `/impact/saptarshi.png` },
-    { img: `/impact/savikash.png` },
-    { img: `/impact/shivika.png` },
-    { img: `/impact/soumyadip.png` },
-    { img: `/impact/swayampurna.png` },
-    { img: `/impact/vignesh.png` },
-    { img: `/impact/yashika.png` },
-];
 
 export default Impact;

@@ -91,7 +91,7 @@ const MyFooter = () => {
           <div>
             <Footer.Title
               title="Partnerships"
-              className="text-xl text-white mb-10"
+              className="text-xl text-white mb-5"
             />
             <Footer.LinkGroup col className="text-white">
               <Footer.Link href="#">

@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function HeaderTop() {
   return (
     <div className=' '>
-        <a href='https://t.me/NEETprep?utm_source=website&utm_medium=banner&utm_campaign=baby_test' target="_blank">
+        <a href='https://www.neetprep.com/neet-courses/3521/target25?utm_source=website&utm_medium=banner&utm_campaign=weakareas' target="_blank">
             <Image
                 src={banner}
                 alt='banner'
