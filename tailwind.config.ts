@@ -10,9 +10,7 @@ export default {
   ],
   theme: {
     extend: { 
-      boxShadow: {
-      'custom': '0px 17px 50px rgba(230,161,35,0.24);',
-    },
+
       colors: {
         'neutralSilver' : '#F5F7FA',
         'neutralDGrey' : '#4D4D4D',
